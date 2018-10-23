@@ -1,6 +1,6 @@
 # Copyright (c) Jupyter Development Team.
 # Distributed under the terms of the Modified BSD License.
-FROM ccr.ccs.tencentyun.com/amalthea/tf-notebook
+FROM ccr.ccs.tencentyun.com/amalthea/tf-notebook:latest
 
 LABEL maintainer="Jizhi.ai"
 
