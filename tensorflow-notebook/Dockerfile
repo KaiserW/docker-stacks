@@ -1,13 +1,10 @@
 # Copyright (c) Jupyter Development Team.
 # Distributed under the terms of the Modified BSD License.
-FROM jupyter/scipy-notebook
+FROM jupyter/tensorflow-notebook
 
-LABEL maintainer="Jupyter Project <jupyter@googlegroups.com>"
+LABEL maintainer="Jizhi.ai"
 
-# Install Tensorflow
-RUN conda install --quiet --yes \
-    'tensorflow=1.11*' \
-    'keras=2.2*' && \
-    conda clean -tipsy && \
+# Install NBgitpuller
+RUN pip install nbgitpuller
     fix-permissions $CONDA_DIR && \
     fix-permissions /home/$NB_USER
